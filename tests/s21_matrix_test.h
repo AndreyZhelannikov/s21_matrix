@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "../s21_matrix.h"
 
@@ -23,5 +24,11 @@ Suite *suite_s21_inverse_matrix(void);
 
 void run_tests(void);
 void run_testcase(Suite *testcase);
+
+double RandomReal(double low, double high);
+int RandomInteger(int low, int high);
+
+void print_matrix(matrix_t *A);
+void print_line(int n);
 
 #endif  //  TEST

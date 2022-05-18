@@ -33,4 +33,8 @@ matrix_t s21_calc_complements(matrix_t *A);
 double s21_determinant(matrix_t *A);
 double s21_determinant(matrix_t *A);
 
+// helpers
+void matrix_init_0(matrix_t *A);
+int is_eq_size(matrix_t *A, matrix_t *B);
+int is_correct(matrix_t *A, matrix_t *B);
 #endif  //  S21_MATRIX
