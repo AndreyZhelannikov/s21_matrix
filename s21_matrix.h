@@ -52,5 +52,5 @@ int s21_inverse_matrix(matrix_t *A);
 // helpers
 void matrix_init_0(matrix_t *A);
 int is_eq_size(matrix_t *A, matrix_t *B);
-int is_correct(matrix_t *A, matrix_t *B);
+int is_correct(matrix_t *A);
 #endif  //  S21_MATRIX
