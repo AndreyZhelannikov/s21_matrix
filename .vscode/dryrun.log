@@ -1,9 +1,10 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/andreyzhelannikov/s21_m'
+make: Entering directory `/Users/andreyzhelannikov/s21_matrix'
 mkdir -p ./objs
 cc -c -Wall -Wextra -std=c11   -o objs/s21_mult_number.o -c ./s21_mult_number.c
 mkdir -p ./objs
 cc -c -Wall -Wextra -std=c11   -o objs/s21_create_matrix.o -c ./s21_create_matrix.c
+ 
 mkdir -p ./objs
 cc -c -Wall -Wextra -std=c11   -o objs/s21_sub_matrix.o -c ./s21_sub_matrix.c
 mkdir -p ./objs
@@ -26,6 +27,7 @@ ar rc s21_matrix.a ./objs/s21_mult_number.o ./objs/s21_create_matrix.o ./objs/s2
 ranlib s21_matrix.a
 mkdir -p ./tests/objs
 cc -c -Wall -Wextra -std=c11   -o ./tests/objs/main.o main.c  
+ 
 mkdir -p ./tests/objs
 cc -g -c -Wall -Wextra -std=c11   -o tests/objs/test_s21_determinant.o -c tests/test_s21_determinant.c
 mkdir -p ./tests/objs
@@ -36,6 +38,7 @@ mkdir -p ./tests/objs
 cc -g -c -Wall -Wextra -std=c11   -o tests/objs/test_s21_sub_matrix.o -c tests/test_s21_sub_matrix.c
 mkdir -p ./tests/objs
 cc -g -c -Wall -Wextra -std=c11   -o tests/objs/test_s21_transpose.o -c tests/test_s21_transpose.c
+ 
 mkdir -p ./tests/objs
 cc -g -c -Wall -Wextra -std=c11   -o tests/objs/test_s21_eq_matrix.o -c tests/test_s21_eq_matrix.c
 mkdir -p ./tests/objs
@@ -50,5 +53,5 @@ mkdir -p ./tests/objs
 cc -g -c -Wall -Wextra -std=c11   -o tests/objs/test_s21_create_matrix.o -c tests/test_s21_create_matrix.c
 cc ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_transpose.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_create_matrix.o  ./tests/objs/main.o  -fprofile-arcs -ftest-coverage -o test -lcheck -L. s21_matrix.a
 ./test
-make: Leaving directory `/Users/andreyzhelannikov/s21_m'
+make: Leaving directory `/Users/andreyzhelannikov/s21_matrix'
  
