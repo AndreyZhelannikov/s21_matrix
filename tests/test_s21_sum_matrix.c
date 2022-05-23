@@ -43,7 +43,7 @@ Suite *suite_s21_sum_matrix(void) {
     Suite *s = suite_create("s21_sum_matrix");
     TCase *tc = tcase_create("suite_s21_sum_matrix");
 
-    tcase_add_loop_test(tc, sum_test_1, 0, 1000);
+    tcase_add_loop_test(tc, sum_test_1, 0, 100);
 
     suite_add_tcase(s, tc);
     return s;

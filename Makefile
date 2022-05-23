@@ -1,4 +1,4 @@
-C=gcc
+CC=gcc
 
 TARGET?=s21_matrix.a
 TEST_TARGET?=test_s21_matrix.a
@@ -42,7 +42,7 @@ ifeq ($(shell uname), Linux)
 TST_LIBS=-lcheck_pic $(shell pkg-config --libs check) -lpthread -lrt -lm -lsubunit
 endif
 
-all: $(TARGET) test gcov_report
+all: $(TARGET) test #gcov_report
 
 gcov_obj: $(GCOV_OBJ) Makefile
 
@@ -55,7 +55,7 @@ $(TEST_TARGET): $(GCOV_OBJS) $(INC)
 	$(RAN) $(TEST_TARGET)
 
 test: $(TARGET) $(TEST_OBJ_DIR)/main.o $(TEST_OBJS) $(TEST_INC) Makefile
-	$(CC) $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(ASAN) $(GCOV_FLAGS) -o $(TEST_EXE) $(TST_LIBS) -L. $(TARGET)
+	$(CC) gsl/lib/libgsl.a $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(ASAN) $(GCOV_FLAGS) -o $(TEST_EXE) $(TST_LIBS) -L. $(TARGET) -I gsl/include
 	./test
 
 test_gcov: $(TEST_TARGET) $(TEST_OBJ_DIR)/main.o $(TEST_OBJS) 
@@ -63,11 +63,11 @@ test_gcov: $(TEST_TARGET) $(TEST_OBJ_DIR)/main.o $(TEST_OBJS)
 
 $(TEST_OBJ_DIR)/main.o: main.c 
 	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(CFLAGS) -o $(TEST_OBJ_DIR)/main.o main.c  
+	$(CC) $(CFLAGS) -o $(TEST_OBJ_DIR)/main.o main.c -I gsl/include
 
 $(TEST_OBJ_DIR)%.o: $(TEST_SRC_DIR)%.c $(TEST_INC) 
 	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $<
+	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
 
 $(OBJS): $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INC) 
 	@$(MK) $(OBJ_DIR)
@@ -89,7 +89,7 @@ $(GCOV_INFO): test_gcov
 
 
 open:
-	open coverage/math.h/index.html
+	open coverage/s21_matrix/index.html
 
 clean:
 	$(RM) $(TEST_OBJ_DIR)/main.o
