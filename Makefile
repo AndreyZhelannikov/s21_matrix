@@ -32,12 +32,12 @@ RM:= rm -f
 MK:=mkdir -p
 
 ASAN:=#-fsanitize=address -g
-STDFLAGS=-c -Wall -Wextra -std=c11 #-Werror
+STDFLAGS=-c -Wall -Wextra -std=c11 -g #-Werror
 CFLAGS?= $(STDFLAGS) $(ASAN)
 TST_CFLAGS:= -g $(STDFLAGS) #$(shell pkg-config --cflags check)
 GCOV_FLAGS?=-fprofile-arcs -ftest-coverage
 
-TST_LIBS?=-lcheck
+TST_LIBS?=-lcheck gsl/lib/libgsl.a gsl/lib/libgslcblas.a
 ifeq ($(shell uname), Linux)
 TST_LIBS=-lcheck_pic $(shell pkg-config --libs check) -lpthread -lrt -lm -lsubunit
 endif
@@ -55,7 +55,7 @@ $(TEST_TARGET): $(GCOV_OBJS) $(INC)
 	$(RAN) $(TEST_TARGET)
 
 test: $(TARGET) $(TEST_OBJ_DIR)/main.o $(TEST_OBJS) $(TEST_INC) Makefile
-	$(CC) gsl/lib/libgsl.a $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(ASAN) $(GCOV_FLAGS) -o $(TEST_EXE) $(TST_LIBS) -L. $(TARGET) -I gsl/include
+	$(CC)  $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(ASAN) $(GCOV_FLAGS) -o $(TEST_EXE) $(TST_LIBS) -L. $(TARGET) -I gsl/include
 	./test
 
 test_gcov: $(TEST_TARGET) $(TEST_OBJ_DIR)/main.o $(TEST_OBJS) 

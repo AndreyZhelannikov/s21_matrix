@@ -2,6 +2,9 @@
 #define TEST
 
 #include <check.h>
+#include <gsl/gsl_blas.h>
+#include <gsl/gsl_blas_types.h>
+#include <gsl/gsl_cblas.h>
 #include <gsl/gsl_matrix.h>
 #include <math.h>
 #include <stdio.h>

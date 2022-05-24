@@ -5,18 +5,19 @@ START_TEST(eq_correct) {
     matrix_t A, B;
     int code1 = s21_create_matrix(rows, columns, &A);
     int code2 = s21_create_matrix(rows, columns, &B);
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            double number = RandomReal(-1e10, 1e10);
-            A.matrix[i][j] = number;
-            B.matrix[i][j] = number;
+    if (code1 == OK && code2 == OK) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                double number = RandomReal(-1e10, 1e10);
+                A.matrix[i][j] = number;
+                B.matrix[i][j] = number;
+            }
         }
+
+        ck_assert_int_eq(s21_eq_matrix(&A, &B), SUCCESS);
+        s21_remove_matrix(&A);
+        s21_remove_matrix(&B);
     }
-
-    ck_assert_int_eq(s21_eq_matrix(&A, &B), SUCCESS);
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&B);
 }
 END_TEST
 
@@ -28,11 +29,11 @@ START_TEST(eq_diff_size) {
     matrix_t A, B;
     int code1 = s21_create_matrix(rows1, columns1, &A);
     int code2 = s21_create_matrix(rows2, columns2, &B);
-
-    ck_assert_int_eq(s21_eq_matrix(&A, &B), FAILURE);
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&B);
+    if (code1 == OK && code2 == OK) {
+        ck_assert_int_eq(s21_eq_matrix(&A, &B), FAILURE);
+        s21_remove_matrix(&A);
+        s21_remove_matrix(&B);
+    }
 }
 END_TEST
 
@@ -43,18 +44,18 @@ START_TEST(eq_same_size) {
     int code1 = s21_create_matrix(rows, columns, &A);
     int code2 = s21_create_matrix(rows, columns, &B);
 
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            double number = RandomReal(-1e10, 1e10);
-            A.matrix[i][j] = number;
-            B.matrix[i][j] = number + 1;
+    if (code1 == OK && code2 == OK) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                double number = RandomReal(-1e10, 1e10);
+                A.matrix[i][j] = number;
+                B.matrix[i][j] = number + 1;
+            }
         }
+        ck_assert_int_eq(s21_eq_matrix(&A, &B), FAILURE);
+        s21_remove_matrix(&A);
+        s21_remove_matrix(&B);
     }
-
-    ck_assert_int_eq(s21_eq_matrix(&A, &B), FAILURE);
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&B);
 }
 END_TEST
 
@@ -64,11 +65,11 @@ START_TEST(eq_zero) {
     matrix_t A, B;
     int code1 = s21_create_matrix(rows, columns, &A);
     int code2 = s21_create_matrix(rows, columns, &B);
-
-    ck_assert_int_eq(s21_eq_matrix(&A, &B), SUCCESS);
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&B);
+    if (code1 == OK && code2 == OK) {
+        ck_assert_int_eq(s21_eq_matrix(&A, &B), SUCCESS);
+        s21_remove_matrix(&A);
+        s21_remove_matrix(&B);
+    }
 }
 END_TEST
 
@@ -77,11 +78,6 @@ Suite *suite_s21_eq_matrix(void) {
     TCase *tc = tcase_create("suite_s21_eq_matrix");
 
     tcase_add_loop_test(tc, eq_correct, 0, 100);
-<<<<<<< HEAD
-    tcase_add_loop_test(tc, eq_incorrect_1, 0, 100);
-    tcase_add_loop_test(tc, eq_incorrect_2, 0, 100);
-=======
->>>>>>> 912d433bbfff2b718fced1ecbdabbee315db6932
     tcase_add_loop_test(tc, eq_diff_size, 0, 100);
     tcase_add_loop_test(tc, eq_same_size, 0, 100);
     tcase_add_loop_test(tc, eq_zero, 0, 100);
