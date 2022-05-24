@@ -1,58 +1,48 @@
 #include "s21_matrix_test.h"
 
-START_TEST(mult_number_test_1) {
+START_TEST(mult_test_1) {
     int rows = RandomInteger(1, 100);
     int columns = RandomInteger(1, 100);
-    matrix_t A = s21_create_matrix(rows, columns);
-    matrix_t mul2 = s21_create_matrix(rows, columns);
-    double mult = RandomReal(-10, 10);
+    double number = RandomReal(-100, 100);
 
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            double number = RandomReal(-1e5, 1e5);
-            A.matrix[i][j] = number;
-            mul2.matrix[i][j] = number * mult;
+    matrix_t A, mult1, mult2;
+    int code1 = s21_create_matrix(rows, columns, &A);
+    int code2 = s21_create_matrix(rows, columns, &mult1);
+    if (code1 == OK && code2 == OK) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                A.matrix[i][j] = RandomReal(-DBL_MIN / 100.0, DBL_MAX / 100.0);
+                mult1.matrix[i][j] = A.matrix[i][j] * number;
+            }
         }
-    }
 
-    matrix_t mul1 = s21_mult_number(&A, mult);
+        int code3 = s21_mult_number(&A, number, &mult2);
+        if (code3 != MALLOC_FAILED) {
+            ck_assert_int_eq(code3, OK);
 
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < columns; j++) {
-            ck_assert_double_eq_tol(mul1.matrix[i][j], mul2.matrix[i][j], 1e-7);
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++) {
+                    ck_assert_double_eq_tol(mult1.matrix[i][j], mult2.matrix[i][j], 1e-6);
+                }
+            }
+            s21_remove_matrix(&mult2);
         }
+        s21_remove_matrix(&A);
+        s21_remove_matrix(&mult1);
     }
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&mul1);
-    s21_remove_matrix(&mul2);
-}
-END_TEST
-
-START_TEST(mult_number_test_2) {
-    int rows = RandomInteger(-10, 0);
-    int columns = RandomInteger(-10, 0);
-    matrix_t A = s21_create_matrix(rows, columns);
-    double mult = RandomReal(-10, 10);
-
-    matrix_t mul = s21_mult_number(&A, mult);
-
-    ck_assert_int_eq(mul.rows, 0);
-    ck_assert_int_eq(mul.columns, 0);
-    ck_assert_int_eq(mul.matrix_type, INCORRECT_MATRIX);
-    ck_assert_ptr_null(mul.matrix);
-
-    s21_remove_matrix(&A);
-    s21_remove_matrix(&mul);
 }
 END_TEST
 
 Suite *suite_s21_mult_number(void) {
-    Suite *s = suite_create("s21_mult_number");
-    TCase *tc = tcase_create("suite_s21_mult_number");
+    Suite *s = suite_create("s21_mult_matrix");
+    TCase *tc = tcase_create("suite_s21_mult_matrix");
 
+<<<<<<< HEAD
     tcase_add_loop_test(tc, mult_number_test_1, 0, 100);
     tcase_add_loop_test(tc, mult_number_test_2, 0, 100);
+=======
+    tcase_add_loop_test(tc, mult_test_1, 0, 100);
+>>>>>>> 912d433bbfff2b718fced1ecbdabbee315db6932
 
     suite_add_tcase(s, tc);
     return s;

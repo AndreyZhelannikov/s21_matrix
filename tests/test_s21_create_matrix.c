@@ -6,22 +6,25 @@ START_TEST(create_test) {
     if (rand() % 2) rows = -rows;
     if (rand() % 2) columns = -columns;
 
-    matrix_t matrix = s21_create_matrix(rows, columns);
+    matrix_t matrix;
+    int code = s21_create_matrix(rows, columns, &matrix);
     if (matrix.matrix && rows > 0 && columns > 0) {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 ck_assert_double_eq_tol(matrix.matrix[i][j], 0, 1e-6);
             }
         }
-        ck_assert_int_eq(matrix.matrix_type, ZERO_MATRIX);
         ck_assert_int_eq(matrix.rows, rows);
         ck_assert_int_eq(matrix.columns, columns);
+        ck_assert_int_eq(code, OK);
     } else {
-        ck_assert_int_eq(matrix.matrix_type, INCORRECT_MATRIX);
-        ck_assert_int_eq(matrix.rows, 0);
-        ck_assert_int_eq(matrix.columns, 0);
+        if (rows <= 0 || columns <= 0) {
+            ck_assert_int_eq(code, INCORRECT_MATRIX);
+        } else {
+            ck_assert_int_eq(code, MALLOC_FAILED);
+        }
     }
-    s21_remove_matrix(&matrix);
+    if (code == OK) s21_remove_matrix(&matrix);
 }
 END_TEST
 
