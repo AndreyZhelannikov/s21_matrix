@@ -3,16 +3,14 @@
 START_TEST(remove_test) {
     int rows = rand() % 100;
     int columns = rand() % 100;
-    if (rand() % 2) rows = -rows;
-    if (rand() % 2) columns = -columns;
-    matrix_t matrix = s21_create_matrix(rows, columns);
-
-    s21_remove_matrix(&matrix);
-
-    ck_assert_ptr_null(matrix.matrix);
-    ck_assert_int_eq(matrix.rows, 0);
-    ck_assert_int_eq(matrix.columns, 0);
-    ck_assert_int_eq(matrix.matrix_type, INCORRECT_MATRIX);
+    matrix_t matrix;
+    int code = s21_create_matrix(rows, columns, &matrix);
+    if (code == OK) {
+        s21_remove_matrix(&matrix);
+        ck_assert_ptr_null(matrix.matrix);
+        ck_assert_int_eq(matrix.rows, 0);
+        ck_assert_int_eq(matrix.columns, 0);
+    }
 }
 END_TEST
 

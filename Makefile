@@ -42,7 +42,7 @@ ifeq ($(shell uname), Linux)
 TST_LIBS=-lcheck_pic $(shell pkg-config --libs check) -lpthread -lrt -lm -lsubunit
 endif
 
-all: $(TARGET) test gcov_report
+all: $(TARGET) test #gcov_report
 
 gcov_obj: $(GCOV_OBJ) Makefile
 
@@ -89,7 +89,7 @@ $(GCOV_INFO): test_gcov
 
 
 open:
-	open coverage/math.h/index.html
+	open coverage/s21_matrix/index.html
 
 clean:
 	$(RM) $(TEST_OBJ_DIR)/main.o

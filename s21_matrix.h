@@ -12,15 +12,8 @@
 #define SUCCESS 1
 #define FAILURE 0
 
-typedef enum { CORRECT_MATRIX = 0, INCORRECT_MATRIX = 1, IDENTITY_MATRIX = 2, ZERO_MATRIX = 3 } matrix_type_t;
-
-typedef struct matrix_struct {
-    double **matrix;
-    int rows;
-    int columns;
-    matrix_type_t matrix_type;
-} matrix_t;
-
+// typedef enum { CORRECT_MATRIX = 0, INCORRECT_MATRIX = 1, IDENTITY_MATRIX = 2, ZERO_MATRIX = 3 }
+// matrix_type_t;
 /* OLD
 matrix_t s21_create_matrix(int rows, int columns);
 void s21_remove_matrix(matrix_t *A);
@@ -36,6 +29,13 @@ double s21_determinant(matrix_t *A);
 */
 
 /* NEW */
+typedef struct matrix_struct {
+    double **matrix;
+    int rows;
+    int columns;
+} matrix_t;
+
+enum { OK = 0, INCORRECT_MATRIX = 1, CALC_ERROR = 2, MALLOC_FAILED = 3 };
 
 int s21_create_matrix(const int rows, const int columns, matrix_t *result);
 void s21_remove_matrix(matrix_t *const A);
