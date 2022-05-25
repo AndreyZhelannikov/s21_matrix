@@ -1,6 +1,6 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/capricey/s21_matrix'
+make: Entering directory `/Users/andreyzhelannikov/s21_matrix'
 make: Nothing to be done for `all'.
  
-make: Leaving directory `/Users/capricey/s21_matrix'
+make: Leaving directory `/Users/andreyzhelannikov/s21_matrix'
  

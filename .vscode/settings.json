@@ -1,6 +1,10 @@
 {
 	"makefile.extensionOutputFolder": "./.vscode",
 	"files.associations": {
-		"s21_matrix.h": "c"
+		"s21_matrix.h": "c",
+		"gsl_matrix.h": "c",
+		"gsl_matrix_ulong.h": "c",
+		"__locale": "c",
+		"s21_matrix_test.h": "c"
 	}
 }

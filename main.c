@@ -21,18 +21,18 @@ void run_testcase(Suite *testcase) {
     srunner_free(sr);
 }
 void run_tests(void) {
-    Suite *list_cases[] = {                            //
-                           suite_s21_create_matrix(),  // DONE
-                           suite_s21_remove_matrix(),  // DONE
-                           suite_s21_eq_matrix(),      // DONE
-                           suite_s21_sum_matrix(),     // DONE
-                           suite_s21_sub_matrix(),     // DONE
-                           suite_s21_mult_number(),    // DONE
-                           suite_s21_mult_matrix(),    // DONE
-                           suite_s21_transpose(),      // DONE
-                                                       //    suite_s21_calc_complements(),  //
-                                                       //    suite_s21_determinant(),       //
-                                                       //    suite_s21_inverse_matrix(),    //
+    Suite *list_cases[] = {                          //
+                                                     //    suite_s21_create_matrix(),  // DONE
+                                                     //    suite_s21_remove_matrix(),  // DONE
+                                                     //    suite_s21_eq_matrix(),      // DONE
+                                                     //    suite_s21_sum_matrix(),     // DONE
+                                                     //    suite_s21_sub_matrix(),     // DONE
+                                                     //    suite_s21_mult_number(),    // DONE
+                                                     //    suite_s21_mult_matrix(),    // DONE
+                                                     //    suite_s21_transpose(),      // DONE
+                                                     //    suite_s21_calc_complements(),  //
+                           suite_s21_determinant(),  //
+                                                     //    suite_s21_inverse_matrix(),    //
                            NULL};
 
     for (Suite **current_testcase = list_cases; *current_testcase != NULL; current_testcase++) {
