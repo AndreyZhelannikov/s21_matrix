@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/capricey/s21_matrix'
 mkdir -p ./objs
@@ -53,4 +54,11 @@ gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_transpose.o -c test
 gcc  ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_create_matrix.o ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_transpose.o  ./tests/objs/main.o  -fprofile-arcs -ftest-coverage -o test -lcheck gsl/lib/libgsl.a gsl/lib/libgslcblas.a -L. s21_matrix.a -I gsl/include
 ./test
 make: Leaving directory `/Users/capricey/s21_matrix'
+=======
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/andreyzhelannikov/s21_matrix'
+make: Nothing to be done for `all'.
+ 
+make: Leaving directory `/Users/andreyzhelannikov/s21_matrix'
+>>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
  
