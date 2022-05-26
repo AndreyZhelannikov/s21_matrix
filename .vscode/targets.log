@@ -8,16 +8,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-<<<<<<< HEAD
-# Make data base, printed on Thu May 26 15:51:15 2022
-=======
-# Make data base, printed on Wed May 25 12:27:40 2022
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+# Make data base, printed on Thu May 26 15:54:28 2022
 
 # Variables
 
 # automatic
- 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
@@ -26,7 +21,7 @@ TEST_SRC_DIR = ./tests
 # makefile (from `Makefile', line 7)
 GCOV_TARGET = ./coverage
 # makefile (from `Makefile', line 17)
-SRC := ./s21_mult_number.c ./s21_create_matrix.c ./s21_sub_matrix.c ./s21_eq_matrix.c ./s21_remove_matrix.c ./s21_helpers.c ./s21_sum_matrix.c ./s21_transpose.c ./s21_inverse_matrix.c ./s21_mult_matrix.c ./s21_calc_complements.c ./s21_determinant.c
+SRC := ./s21_calc_complements.c ./s21_create_matrix.c ./s21_determinant.c ./s21_eq_matrix.c ./s21_helpers.c ./s21_inverse_matrix.c ./s21_mult_matrix.c ./s21_mult_number.c ./s21_remove_matrix.c ./s21_sub_matrix.c ./s21_sum_matrix.c ./s21_transpose.c
 # environment
 VSCODE_LOG_NATIVE = false
 # makefile (from `Makefile', line 3)
@@ -38,7 +33,7 @@ TARGET = s21_matrix.a
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/andreyzhelannikov/s21_matrix
+CURDIR := /Users/capricey/s21_matrix
 # makefile (from `Makefile', line 32)
 MK := mkdir -p
 # makefile
@@ -46,7 +41,7 @@ SHELL = /bin/sh
 # makefile (from `Makefile', line 31)
 RM := rm -f
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"ru","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 36)
@@ -62,23 +57,20 @@ TST_CFLAGS := -g -c -Wall -Wextra -std=c11 -g
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-<<<<<<< HEAD
 VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n00026lm000jmx/T/vscode-ipc-5ab020a6-b687-4ee2-b8d6-a74391238bc7.sock
-=======
-INFOPATH = /opt/homebrew/share/info:
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zf/nthzbpb520946jjgmb2f_s0r0000gn/T/vscode-ipc-218a5b2b-d83b-4748-acc5-485af5ef3b4a.sock
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
 # environment
 VSCODE_CWD = /
 # makefile (from `Makefile', line 20)
-TEST_SRC := ./tests/test_s21_determinant.c ./tests/test_s21_inverse_matrix.c ./tests/test_s21_mult_matrix.c ./tests/test_s21_sub_matrix.c ./tests/test_s21_transpose.c ./tests/test_s21_eq_matrix.c ./tests/test_s21_calc_complements.c ./tests/test_s21_remove_matrix.c ./tests/test_s21_sum_matrix.c ./tests/test_s21_mult_number.c ./tests/test_s21_create_matrix.c
+ 
+TEST_SRC := ./tests/test_s21_calc_complements.c ./tests/test_s21_create_matrix.c ./tests/test_s21_determinant.c ./tests/test_s21_eq_matrix.c ./tests/test_s21_inverse_matrix.c ./tests/test_s21_mult_matrix.c ./tests/test_s21_mult_number.c ./tests/test_s21_remove_matrix.c ./tests/test_s21_sub_matrix.c ./tests/test_s21_sum_matrix.c ./tests/test_s21_transpose.c
 # makefile (from `Makefile', line 30)
 RAN := ranlib
 # environment
-PATH = /opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+PATH = /Users/capricey/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Apple/usr/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+LIBRARY_PATH = /usr/local/Cellar/check/0.15.2/lib:/usr/local/lib
 # makefile (from `Makefile', line 5)
 TEST_EXE = test
 # environment
@@ -92,46 +84,39 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-<<<<<<< HEAD
 SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.PQeslsWNPx/Listeners
 # environment
 CPLUS_INCLUDE_PATH = /usr/local/include/
-=======
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.5IGLjuDCrf/Listeners
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
 # automatic
 %F = $(notdir $%)
 # environment
+HOMEBREW_TEMP = /tmp/capricey/Homebrew/Temp
+# environment
 VSCODE_PIPE_LOGGING = true
 # makefile (from `Makefile', line 22)
-OBJS := ./objs/s21_mult_number.o ./objs/s21_create_matrix.o ./objs/s21_sub_matrix.o ./objs/s21_eq_matrix.o ./objs/s21_remove_matrix.o ./objs/s21_helpers.o ./objs/s21_sum_matrix.o ./objs/s21_transpose.o ./objs/s21_inverse_matrix.o ./objs/s21_mult_matrix.o ./objs/s21_calc_complements.o ./objs/s21_determinant.o
+OBJS := ./objs/s21_calc_complements.o ./objs/s21_create_matrix.o ./objs/s21_determinant.o ./objs/s21_eq_matrix.o ./objs/s21_helpers.o ./objs/s21_inverse_matrix.o ./objs/s21_mult_matrix.o ./objs/s21_mult_number.o ./objs/s21_remove_matrix.o ./objs/s21_sub_matrix.o ./objs/s21_sum_matrix.o ./objs/s21_transpose.o
 # environment
-PWD = /Users/andreyzhelannikov/s21_matrix
+PWD = /Users/capricey/s21_matrix
 # makefile (from `Makefile', line 24)
-TEST_OBJS := ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_transpose.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_create_matrix.o 
-# environment
-HOMEBREW_CELLAR = /opt/homebrew/Cellar
+TEST_OBJS := ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_create_matrix.o ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_transpose.o 
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # makefile (from `Makefile', line 23)
-GCOV_OBJS := ./tests/objs/s21_mult_number.o ./tests/objs/s21_create_matrix.o ./tests/objs/s21_sub_matrix.o ./tests/objs/s21_eq_matrix.o ./tests/objs/s21_remove_matrix.o ./tests/objs/s21_helpers.o ./tests/objs/s21_sum_matrix.o ./tests/objs/s21_transpose.o ./tests/objs/s21_inverse_matrix.o ./tests/objs/s21_mult_matrix.o ./tests/objs/s21_calc_complements.o ./tests/objs/s21_determinant.o
-# environment
-MANPATH = /opt/local/share/man:/opt/homebrew/share/man::
+GCOV_OBJS := ./tests/objs/s21_calc_complements.o ./tests/objs/s21_create_matrix.o ./tests/objs/s21_determinant.o ./tests/objs/s21_eq_matrix.o ./tests/objs/s21_helpers.o ./tests/objs/s21_inverse_matrix.o ./tests/objs/s21_mult_matrix.o ./tests/objs/s21_mult_number.o ./tests/objs/s21_remove_matrix.o ./tests/objs/s21_sub_matrix.o ./tests/objs/s21_sum_matrix.o ./tests/objs/s21_transpose.o
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/andreyzhelannikov
+HOME = /Users/capricey
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/andreyzhelannikov/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /Users/capricey/Library/Application Support/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
 # environment
-LOGNAME = andreyzhelannikov
+LOGNAME = capricey
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
- 
-ZSH = /Users/andreyzhelannikov/.oh-my-zsh
+ZSH = /Users/capricey/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -143,13 +128,15 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
+HOMEBREW_CACHE = /tmp/capricey/Homebrew/Caches
+# environment
 SHLVL = 1
 # makefile (from `Makefile', line 1)
 CC = gcc
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = andreyzhelannikov
+USER = capricey
 # makefile
 .DEFAULT_GOAL := all
 # makefile (from `Makefile', line 14)
@@ -169,11 +156,11 @@ INC := ./s21_matrix.h
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/zf/nthzbpb520946jjgmb2f_s0r0000gn/T/
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n00026lm000jmx/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/andreyzhelannikov/Library/Application Support/Code/1.67.1-main.sock
+VSCODE_IPC_HOOK = /Users/capricey/Library/Application Support/Code/1.66.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -181,9 +168,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.3892367.3892373
-# environment
-HOMEBREW_PREFIX = /opt/homebrew
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.12886697606.12886697808
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from `Makefile', line 34)
@@ -193,9 +178,7 @@ ASAN :=
 # makefile (from `Makefile', line 35)
 STDFLAGS = -c -Wall -Wextra -std=c11 -g 
 # environment
-HOMEBREW_REPOSITORY = /opt/homebrew
-# environment
-__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+__CF_USER_TEXT_ENCODING = 0x469D:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
 # makefile (from `Makefile', line 26)
@@ -207,7 +190,7 @@ SRC_DIR = .
 # automatic
 <F = $(notdir $<)
 # makefile (from `Makefile', line 40)
-TST_LIBS = -lcheck -lgsl -lgslcblas
+TST_LIBS = -lcheck gsl/lib/libgsl.a gsl/lib/libgslcblas.a
 # environment
 PAGER = less
 # environment
@@ -222,6 +205,8 @@ SECURITYSESSIONID = 189f7
 GCOV_FLAGS = -fprofile-arcs -ftest-coverage
 # default
 SUFFIXES := 
+# environment
+C_INCLUDE_PATH = /usr/local/include/
 # default
 .INCLUDE_DIRS = /usr/local/include
 # environment
@@ -231,19 +216,12 @@ GCOV_INFO = coverage.info
 # environment
 LANG = C
 # environment
-<<<<<<< HEAD
 VSCODE_PID = 41490
 # makefile (from `Makefile', line 4)
 TEST_TARGET = test_s21_matrix.a
 # variable set hash-table stats:
-# Load=103/1024=10%, Rehash=0, Collisions=13/191=7%
-=======
-VSCODE_PID = 5245
-# makefile (from `Makefile', line 4)
-TEST_TARGET = test_s21_matrix.a
-# variable set hash-table stats:
-# Load=101/1024=10%, Rehash=0, Collisions=12/189=6%
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+ 
+# Load=103/1024=10%, Rehash=0, Collisions=13/199=7%
 
 # Pattern-specific Variable Values
 
@@ -251,15 +229,9 @@ TEST_TARGET = test_s21_matrix.a
 
 # Directories
 
-<<<<<<< HEAD
-# . (device 16777230, inode 35236): 34 files, no impossibilities.
-# tests (device 16777230, inode 35837): 15 files, no impossibilities so far.
-=======
-# . (device 16777234, inode 5503127): 30 files, no impossibilities.
-# tests (device 16777234, inode 5503235): 15 files, no impossibilities so far.
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+# . (device 16777230, inode 35236): 28 files, no impossibilities.
 
-# 49 files, no impossibilities in 2 directories.
+# 28 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -275,23 +247,9 @@ tests/objs%.o: ./tests%.c ./tests/s21_matrix_test.h
 
 # Not a target:
 ./s21_determinant.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-tests/test_s21_sub_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:55:21
- 
-#  File has been updated.
- 
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_determinant.o: ./s21_determinant.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -306,36 +264,18 @@ tests/objs/s21_determinant.o: ./s21_determinant.c tests/s21_matrix_test.h
 objs/s21_sum_matrix.o: ./s21_sum_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_sum_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-tests/objs/test_s21_inverse_matrix.o: tests/test_s21_inverse_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_inverse_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_inverse_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 gcov_report: coverage
 #  Implicit rule search has not been done.
@@ -348,11 +288,11 @@ all: s21_matrix.a test
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
 
-test_s21_matrix.a: tests/objs/s21_mult_number.o tests/objs/s21_create_matrix.o tests/objs/s21_sub_matrix.o tests/objs/s21_eq_matrix.o tests/objs/s21_remove_matrix.o tests/objs/s21_helpers.o tests/objs/s21_sum_matrix.o tests/objs/s21_transpose.o tests/objs/s21_inverse_matrix.o tests/objs/s21_mult_matrix.o tests/objs/s21_calc_complements.o tests/objs/s21_determinant.o s21_matrix.h
+test_s21_matrix.a: tests/objs/s21_calc_complements.o tests/objs/s21_create_matrix.o tests/objs/s21_determinant.o tests/objs/s21_eq_matrix.o tests/objs/s21_helpers.o tests/objs/s21_inverse_matrix.o tests/objs/s21_mult_matrix.o tests/objs/s21_mult_number.o tests/objs/s21_remove_matrix.o tests/objs/s21_sub_matrix.o tests/objs/s21_sum_matrix.o tests/objs/s21_transpose.o s21_matrix.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -366,43 +306,25 @@ test_s21_matrix.a: tests/objs/s21_mult_number.o tests/objs/s21_create_matrix.o t
 #  Modification time never checked.
 #  File has not been updated.
 
-tests/objs/test_s21_mult_number.o: tests/test_s21_mult_number.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_mult_number'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_mult_number.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ./s21_sum_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:51:02
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-s21_matrix.a: objs/s21_mult_number.o objs/s21_create_matrix.o objs/s21_sub_matrix.o objs/s21_eq_matrix.o objs/s21_remove_matrix.o objs/s21_helpers.o objs/s21_sum_matrix.o objs/s21_transpose.o objs/s21_inverse_matrix.o objs/s21_mult_matrix.o objs/s21_calc_complements.o objs/s21_determinant.o Makefile
 #  Implicit rule search has not been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+#  Modification time never checked.
+#  File has not been updated.
+
+s21_matrix.a: objs/s21_calc_complements.o objs/s21_create_matrix.o objs/s21_determinant.o objs/s21_eq_matrix.o objs/s21_helpers.o objs/s21_inverse_matrix.o objs/s21_mult_matrix.o objs/s21_mult_number.o objs/s21_remove_matrix.o objs/s21_sub_matrix.o objs/s21_sum_matrix.o objs/s21_transpose.o Makefile
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
 #  commands to execute (from `Makefile', line 50):
 	$(AR) $(TARGET) $(OBJS)
 	$(RAN) $(TARGET)
@@ -418,91 +340,37 @@ tests/objs/s21_sum_matrix.o: ./s21_sum_matrix.c tests/s21_matrix_test.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
+ 
 objs/s21_helpers.o: ./s21_helpers.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_helpers'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
 # Not a target:
-tests/test_s21_inverse_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-19 13:08:36
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
-
-tests/objs/test_s21_create_matrix.o: tests/test_s21_create_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_create_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+tests/objs/test_s21_create_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/main.o: main.c
 #  Implicit rule search has not been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 65):
 	@$(MK) $(TEST_OBJ_DIR)
 	$(CC) $(CFLAGS) -o $(TEST_OBJ_DIR)/main.o main.c -I gsl/include
 	
 
 # Not a target:
-tests/test_s21_mult_number.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 14:08:09
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-tests/objs/test_s21_mult_matrix.o: tests/test_s21_mult_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_mult_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+tests/objs/test_s21_mult_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -510,27 +378,11 @@ tests/objs/test_s21_mult_matrix.o: tests/test_s21_mult_matrix.c tests/s21_matrix
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-tests/test_s21_create_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:16:28
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 objs/s21_remove_matrix.o: ./s21_remove_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_remove_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -544,7 +396,7 @@ gcov_obj: Makefile
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:27:18
+#  Last modified 2022-05-26 15:53:16
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -560,113 +412,67 @@ tests/objs/s21_helpers.o: ./s21_helpers.c tests/s21_matrix_test.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-tests/objs/test_s21_transpose.o: tests/test_s21_transpose.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_transpose'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
- 
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_transpose.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 objs/s21_calc_complements.o: ./s21_calc_complements.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_calc_complements'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := objs/s21_calc_complements.o
+# automatic
+# % := 
+# automatic
+# * := /s21_calc_complements
+# automatic
+# + := ./s21_calc_complements.c s21_matrix.h
+# automatic
+# | := 
+# automatic
+# < := ./s21_calc_complements.c
+# automatic
+# ^ := ./s21_calc_complements.c s21_matrix.h
+# automatic
+# ? := ./s21_calc_complements.c s21_matrix.h
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=8/32=25%, Rehash=0, Collisions=5/18=28%
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-tests/objs/test_s21_eq_matrix.o: tests/test_s21_eq_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_eq_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
-
-test: s21_matrix.a tests/objs/main.o tests/objs/test_s21_determinant.o tests/objs/test_s21_inverse_matrix.o tests/objs/test_s21_mult_matrix.o tests/objs/test_s21_sub_matrix.o tests/objs/test_s21_transpose.o tests/objs/test_s21_eq_matrix.o tests/objs/test_s21_calc_complements.o tests/objs/test_s21_remove_matrix.o tests/objs/test_s21_sum_matrix.o tests/objs/test_s21_mult_number.o tests/objs/test_s21_create_matrix.o tests/s21_matrix_test.h Makefile
+# Not a target:
+tests/objs/test_s21_eq_matrix.o:
 #  Implicit rule search has not been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
+
+test: s21_matrix.a tests/objs/main.o tests/objs/test_s21_calc_complements.o tests/objs/test_s21_create_matrix.o tests/objs/test_s21_determinant.o tests/objs/test_s21_eq_matrix.o tests/objs/test_s21_inverse_matrix.o tests/objs/test_s21_mult_matrix.o tests/objs/test_s21_mult_number.o tests/objs/test_s21_remove_matrix.o tests/objs/test_s21_sub_matrix.o tests/objs/test_s21_sum_matrix.o tests/objs/test_s21_transpose.o tests/s21_matrix_test.h Makefile
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 58):
 	$(CC)  $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(ASAN) $(GCOV_FLAGS) -o $(TEST_EXE) $(TST_LIBS) -L. $(TARGET) -I gsl/include
 	./test
 	
 
 # Not a target:
-tests/test_s21_mult_matrix.c:
-#  Implicit rule search has been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 21:55:08
-=======
-#  Last modified 2022-05-25 12:23:33
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+./s21_remove_matrix.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
-./s21_remove_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:31:04
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-tests/objs/test_s21_determinant.o: tests/test_s21_determinant.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_determinant'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+tests/objs/test_s21_determinant.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_remove_matrix.o: ./s21_remove_matrix.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -679,31 +485,9 @@ tests/objs/s21_remove_matrix.o: ./s21_remove_matrix.c tests/s21_matrix_test.h
 	
 
 # Not a target:
-tests/test_s21_transpose.c:
-#  Implicit rule search has been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:02:13
-=======
-#  Last modified 2022-05-25 12:23:33
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 ./s21_calc_complements.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-tests/test_s21_eq_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
+#  Last modified 2022-05-24 19:31:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -719,28 +503,11 @@ tests/objs/s21_calc_complements.o: ./s21_calc_complements.c tests/s21_matrix_tes
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
- 
-# Not a target:
-tests/test_s21_determinant.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-19 13:08:36
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 # Not a target:
 main.c:
-#  Implicit rule search has been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:26
-=======
-#  Last modified 2022-05-25 12:23:33
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -756,44 +523,23 @@ fclean: clean
 	$(RM) -r $(GCOV_TARGET)
 	
 
-tests/objs/test_s21_sum_matrix.o: tests/test_s21_sum_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_sum_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_sum_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ./s21_helpers.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 objs/s21_sub_matrix.o: ./s21_sub_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_sub_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -809,18 +555,9 @@ coverage.info: test_gcov
 	
 
 # Not a target:
-tests/test_s21_sum_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:54:25
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 s21_matrix.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
+#  Last modified 2022-05-24 19:56:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -834,12 +571,9 @@ s21_matrix.h:
 
 # Not a target:
 ./s21_sub_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:56:07
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_sub_matrix.o: ./s21_sub_matrix.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -854,19 +588,11 @@ tests/objs/s21_sub_matrix.o: ./s21_sub_matrix.c tests/s21_matrix_test.h
 objs/s21_inverse_matrix.o: ./s21_inverse_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_inverse_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
- 
 	
 
 re: fclean all
@@ -883,7 +609,6 @@ clean:
 #  commands to execute (from `Makefile', line 95):
 	$(RM) $(TEST_OBJ_DIR)/main.o
 	$(RM) $(OBJS)
- 
 	$(RM) $(GCDA)
 	$(RM) $(GCNO)
 	$(RM) $(TEST_OBJS)
@@ -891,6 +616,7 @@ clean:
 	
 
 coverage: coverage.info
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -905,36 +631,18 @@ coverage: coverage.info
 objs/s21_mult_number.o: ./s21_mult_number.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_mult_number'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-tests/objs/test_s21_remove_matrix.o: tests/test_s21_remove_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_remove_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_remove_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 open:
 #  Phony target (prerequisite of .PHONY).
@@ -947,55 +655,31 @@ open:
 
 # Not a target:
 ./s21_inverse_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 objs/s21_create_matrix.o: ./s21_create_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_create_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-tests/objs/test_s21_calc_complements.o: tests/test_s21_calc_complements.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_calc_complements'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_calc_complements.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 tests/s21_matrix_test.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:23:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_inverse_matrix.o: ./s21_inverse_matrix.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -1003,41 +687,21 @@ tests/objs/s21_inverse_matrix.o: ./s21_inverse_matrix.c tests/s21_matrix_test.h
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 77):
- 
 	@$(MK) $(TEST_OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
 # Not a target:
 ./s21_mult_number.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 14:06:09
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-tests/test_s21_remove_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:15:53
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 objs/s21_mult_matrix.o: ./s21_mult_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_mult_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -1055,21 +719,9 @@ tests/objs/s21_mult_number.o: ./s21_mult_number.c tests/s21_matrix_test.h
 
 # Not a target:
 ./s21_create_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:00:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-tests/test_s21_calc_complements.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-19 13:08:36
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_create_matrix.o: ./s21_create_matrix.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -1084,15 +736,8 @@ tests/objs/s21_create_matrix.o: ./s21_create_matrix.c tests/s21_matrix_test.h
 objs/s21_transpose.o: ./s21_transpose.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_transpose'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:29
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -1101,15 +746,8 @@ objs/s21_transpose.o: ./s21_transpose.c s21_matrix.h
 objs/s21_eq_matrix.o: ./s21_eq_matrix.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_eq_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -1117,29 +755,15 @@ objs/s21_eq_matrix.o: ./s21_eq_matrix.c s21_matrix.h
 
 # Not a target:
 ./s21_mult_matrix.c:
-#  Implicit rule search has been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 21:47:22
-=======
-#  Last modified 2022-05-25 12:23:41
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 objs/s21_determinant.o: ./s21_determinant.c s21_matrix.h
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `/s21_determinant'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:28
-=======
-#  Last modified 2022-05-25 12:27:21
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Modification time never checked.
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 73):
 	@$(MK) $(OBJ_DIR)
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -1155,53 +779,31 @@ tests/objs/s21_mult_matrix.o: ./s21_mult_matrix.c tests/s21_matrix_test.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 	
 
-test_gcov: test_s21_matrix.a tests/objs/main.o tests/objs/test_s21_determinant.o tests/objs/test_s21_inverse_matrix.o tests/objs/test_s21_mult_matrix.o tests/objs/test_s21_sub_matrix.o tests/objs/test_s21_transpose.o tests/objs/test_s21_eq_matrix.o tests/objs/test_s21_calc_complements.o tests/objs/test_s21_remove_matrix.o tests/objs/test_s21_sum_matrix.o tests/objs/test_s21_mult_number.o tests/objs/test_s21_create_matrix.o
+test_gcov: test_s21_matrix.a tests/objs/main.o tests/objs/test_s21_calc_complements.o tests/objs/test_s21_create_matrix.o tests/objs/test_s21_determinant.o tests/objs/test_s21_eq_matrix.o tests/objs/test_s21_inverse_matrix.o tests/objs/test_s21_mult_matrix.o tests/objs/test_s21_mult_number.o tests/objs/test_s21_remove_matrix.o tests/objs/test_s21_sub_matrix.o tests/objs/test_s21_sum_matrix.o tests/objs/test_s21_transpose.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 62):
 	$(CC) $(TEST_OBJS) $(TEST_OBJ_DIR)/main.o $(GCOV_FLAGS) -o $(TEST_GCOV_EXE) $(TST_LIBS) -L. $(TEST_TARGET)
 	
 
-tests/objs/test_s21_sub_matrix.o: tests/test_s21_sub_matrix.c tests/s21_matrix_test.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `/test_s21_sub_matrix'
-<<<<<<< HEAD
-#  Last modified 2022-05-24 22:03:30
-=======
-#  Last modified 2022-05-25 12:27:22
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 69):
-	@$(MK) $(TEST_OBJ_DIR)
-	$(CC) $(TST_CFLAGS) -o $@ -c $< -I gsl/include
-	
+# Not a target:
+tests/objs/test_s21_sub_matrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ./s21_transpose.c:
-#  Implicit rule search has been done.
-<<<<<<< HEAD
-#  Last modified 2022-05-24 21:58:28
-=======
-#  Last modified 2022-05-25 12:23:33
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ./s21_eq_matrix.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 13:26:23
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 tests/objs/s21_transpose.o: ./s21_transpose.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
@@ -1215,7 +817,6 @@ tests/objs/s21_transpose.o: ./s21_transpose.c tests/s21_matrix_test.h
 
 tests/objs/s21_eq_matrix.o: ./s21_eq_matrix.c tests/s21_matrix_test.h
 #  Implicit rule search has not been done.
- 
 #  Implicit/static pattern stem: `/s21_eq_matrix'
 #  Modification time never checked.
 #  File has not been updated.
@@ -1225,7 +826,7 @@ tests/objs/s21_eq_matrix.o: ./s21_eq_matrix.c tests/s21_matrix_test.h
 	
 
 # files hash-table stats:
-# Load=79/1024=8%, Rehash=0, Collisions=4/278=1%
+# Load=68/1024=7%, Rehash=0, Collisions=4/212=2%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -1237,10 +838,6 @@ tests/objs/s21_eq_matrix.o: ./s21_eq_matrix.c tests/s21_matrix_test.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-<<<<<<< HEAD
-# Finished Make data base on Thu May 26 15:51:15 2022
-=======
-# Finished Make data base on Wed May 25 12:27:40 2022
->>>>>>> 93e3dd9a9b8e83c9d363381e0073feb8c862cd85
+# Finished Make data base on Thu May 26 15:54:28 2022
 
  
