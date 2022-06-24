@@ -9,16 +9,14 @@ int s21_determinant(matrix_t *A, double *result) {
     if (A->rows == 1) return A->matrix[0][0];
 
     int n = A->rows;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) printf("%6.0lf ", A->matrix[i][j]);
-        printf("\n");
-    }
+    // for (int i = 0; i < n; ++i) {
+    //     for (int j = 0; j < n; ++j) printf("%6.0lf ", A->matrix[i][j]);
+    //     printf("\n");
+    // }
     matrix_t tmp;
     int code = s21_create_matrix(n, n, &tmp);
 
     if (code == OK) {
-        // get_cofactor(A, &tmp, -1, -1, n);
-
         *result = det(A, n);
     }
     s21_remove_matrix(&tmp);
