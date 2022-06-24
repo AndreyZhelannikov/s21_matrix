@@ -35,7 +35,11 @@ typedef struct matrix_struct {
     int columns;
 } matrix_t;
 
-enum { OK = 0, INCORRECT_MATRIX = 1, CALC_ERROR = 2, MALLOC_FAILED = 3 };
+enum {
+    OK = 0,
+    INCORRECT_MATRIX = 1,
+    CALC_ERROR = 2,
+};
 
 int s21_create_matrix(const int rows, const int columns, matrix_t *result);
 void s21_remove_matrix(matrix_t *const A);
@@ -47,7 +51,9 @@ int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 int s21_transpose(matrix_t *A, matrix_t *result);
 int s21_calc_complements(matrix_t *A, matrix_t *result);
 int s21_determinant(matrix_t *A, double *result);
-int s21_inverse_matrix(matrix_t *A);
+int s21_inverse_matrix(matrix_t *A, matrix_t *result);
+
+void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n);
 
 // helpers
 void matrix_init_0(matrix_t *A);

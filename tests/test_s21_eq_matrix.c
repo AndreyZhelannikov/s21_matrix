@@ -77,10 +77,10 @@ Suite *suite_s21_eq_matrix(void) {
     Suite *s = suite_create("s21_eq_matrix");
     TCase *tc = tcase_create("suite_s21_eq_matrix");
 
-    tcase_add_loop_test(tc, eq_correct, 0, 100);
-    tcase_add_loop_test(tc, eq_diff_size, 0, 100);
-    tcase_add_loop_test(tc, eq_same_size, 0, 100);
-    tcase_add_loop_test(tc, eq_zero, 0, 100);
+    tcase_add_loop_test(tc, eq_correct, 0, 10);
+    tcase_add_loop_test(tc, eq_diff_size, 0, 10);
+    tcase_add_loop_test(tc, eq_same_size, 0, 10);
+    tcase_add_loop_test(tc, eq_zero, 0, 10);
 
     suite_add_tcase(s, tc);
     return s;

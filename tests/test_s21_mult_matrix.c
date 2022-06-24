@@ -9,7 +9,7 @@ START_TEST(mult_test1) {  //
     int columns = 2;
     int rows = 2;
 
-    matrix_t m1, m2, mul;
+    matrix_t m1 = {0}, m2 = {0}, mul = {0};
     int code1 = s21_create_matrix(rows, n, &m1);
     int code2 = s21_create_matrix(n, columns, &m2);
 
@@ -37,7 +37,7 @@ START_TEST(mult_test1) {  //
 
         int mul_code = s21_mult_matrix(&m1, &m2, &mul);
 
-        if (mul_code != MALLOC_FAILED) {
+        if (mul_code != CALC_ERROR) {
             ck_assert_int_eq(mul.rows, rows);
             ck_assert_int_eq(mul.columns, columns);
 
@@ -59,8 +59,8 @@ START_TEST(mult_test1) {  //
 END_TEST
 
 START_TEST(incorrect_matrix_1) {
-    matrix_t m1;
-    matrix_t m2;
+    matrix_t m1 = {0};
+    matrix_t m2 = {0};
     int code1 = s21_create_matrix(5, 5, &m1);
     int code2 = s21_create_matrix(6, 6, &m2);
     if (code1 == OK && code2 == OK) {
@@ -74,8 +74,8 @@ START_TEST(incorrect_matrix_1) {
 END_TEST
 
 START_TEST(incorrect_matrix_2) {
-    matrix_t m1;
-    matrix_t m2;
+    matrix_t m1 = {0};
+    matrix_t m2 = {0};
     int code1 = s21_create_matrix(5, 5, &m1);
     int code2 = s21_create_matrix(6, 6, &m2);
     m1.rows = -100;
@@ -93,7 +93,7 @@ Suite *suite_s21_mult_matrix(void) {
     Suite *s = suite_create("s21_mult_matrix");
     TCase *tc = tcase_create("suite_s21_mult_matrix");
 
-    tcase_add_loop_test(tc, mult_test1, 0, 1000);
+    tcase_add_loop_test(tc, mult_test1, 0, 10);
     tcase_add_test(tc, incorrect_matrix_1);
     tcase_add_test(tc, incorrect_matrix_2);
 

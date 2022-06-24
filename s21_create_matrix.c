@@ -10,7 +10,7 @@ int s21_create_matrix(int rows, int columns, matrix_t *result) {
                 result->matrix[i] = ptr + columns * i;
             }
         } else {
-            code = MALLOC_FAILED;
+            code = CALC_ERROR;
         }
     } else {
         code = INCORRECT_MATRIX;

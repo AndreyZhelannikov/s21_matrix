@@ -4,7 +4,7 @@ START_TEST(sub_test_1) {
     int rows = RandomInteger(1, 100);
     int columns = RandomInteger(1, 100);
 
-    matrix_t A, B, sub1, sub2;
+    matrix_t A = {0}, B = {0}, sub1 = {0}, sub2 = {0};
     int code1 = s21_create_matrix(rows, columns, &A);
     int code2 = s21_create_matrix(rows, columns, &B);
     int code3 = s21_create_matrix(rows, columns, &sub1);
@@ -18,7 +18,7 @@ START_TEST(sub_test_1) {
         }
 
         int code4 = s21_sub_matrix(&A, &B, &sub2);
-        if (code4 != MALLOC_FAILED) {
+        if (code4 != CALC_ERROR) {
             ck_assert_int_eq(code4, OK);
 
             for (int i = 0; i < rows; i++) {
@@ -41,12 +41,13 @@ START_TEST(sub_test_2) {
     int columns1 = RandomInteger(1, 50);
     int columns2 = RandomInteger(51, 100);
 
-    matrix_t A, B, sub2;
+    matrix_t A = {0}, B = {0}, sub2 = {0};
     int code1 = s21_create_matrix(rows1, columns1, &A);
     int code2 = s21_create_matrix(rows2, columns2, &B);
     int code3 = s21_sub_matrix(&A, &B, &sub2);
 
-    if (code1 == OK && code2 == OK) ck_assert_int_eq(code3, CALC_ERROR);
+    if (code1 == OK && code2 == OK)
+        ck_assert_int_eq(code3, CALC_ERROR);
 
     s21_remove_matrix(&A);
     s21_remove_matrix(&B);
@@ -57,8 +58,8 @@ Suite *suite_s21_sub_matrix(void) {
     Suite *s = suite_create("s21_sub_matrix");
     TCase *tc = tcase_create("suite_s21_sub_matrix");
 
-    tcase_add_loop_test(tc, sub_test_1, 0, 100);
-    tcase_add_loop_test(tc, sub_test_2, 0, 100);
+    tcase_add_loop_test(tc, sub_test_1, 0, 10);
+    tcase_add_loop_test(tc, sub_test_2, 0, 10);
 
     suite_add_tcase(s, tc);
     return s;

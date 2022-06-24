@@ -1,6 +1,5 @@
 #include "s21_matrix.h"
 
-void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n);
 double det(matrix_t *tmp, int n);
 
 int s21_determinant(matrix_t *A, double *result) {
@@ -8,14 +7,13 @@ int s21_determinant(matrix_t *A, double *result) {
         return INCORRECT_MATRIX;
     if (A->rows != A->columns)
         return CALC_ERROR;
-    if (A->rows == 1)
-        return A->matrix[0][0];
+    if (A->rows == 1) {
+        *result = A->matrix[0][0];
+        return OK;
+    }
 
     int n = A->rows;
-    // for (int i = 0; i < n; ++i) {
-    //     for (int j = 0; j < n; ++j) printf("%6.0lf ", A->matrix[i][j]);
-    //     printf("\n");
-    // }
+
     matrix_t tmp;
     int code = s21_create_matrix(n, n, &tmp);
 
@@ -47,6 +45,8 @@ double det(matrix_t *tmp, int n) {
 }
 
 void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n) {
+    dest->rows = n - 1;
+    dest->columns = n - 1;
     int r = 0;
     int c = 0;
     for (int i = 0; i < n; i++) {

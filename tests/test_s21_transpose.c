@@ -6,7 +6,7 @@ START_TEST(test1) {
     gsl_matrix *gsl_m = gsl_matrix_alloc(rows, columns);
     gsl_matrix *gsl_transpose = gsl_matrix_alloc(columns, rows);
 
-    matrix_t m, transpose;
+    matrix_t m = {0}, transpose = {0};
     int code = s21_create_matrix(rows, columns, &m);
     if (code == OK) {
         for (int i = 0; i < rows; ++i) {
@@ -42,7 +42,7 @@ Suite *suite_s21_transpose(void) {
     Suite *s = suite_create("s21_transpose");
     TCase *tc = tcase_create("suite_s21_transpose");
 
-    tcase_add_loop_test(tc, test1, 0, 1000);
+    tcase_add_loop_test(tc, test1, 0, 10);
 
     suite_add_tcase(s, tc);
     return s;
