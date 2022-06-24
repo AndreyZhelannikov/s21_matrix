@@ -4,21 +4,22 @@ void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n);
 double det(matrix_t *tmp, int n);
 
 int s21_determinant(matrix_t *A, double *result) {
-    if (is_incorrect(A)) return INCORRECT_MATRIX;
-    if (A->rows != A->columns) return CALC_ERROR;
-    if (A->rows == 1) return A->matrix[0][0];
+    if (is_incorrect(A))
+        return INCORRECT_MATRIX;
+    if (A->rows != A->columns)
+        return CALC_ERROR;
+    if (A->rows == 1)
+        return A->matrix[0][0];
 
     int n = A->rows;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) printf("%6.0lf ", A->matrix[i][j]);
-        printf("\n");
-    }
+    // for (int i = 0; i < n; ++i) {
+    //     for (int j = 0; j < n; ++j) printf("%6.0lf ", A->matrix[i][j]);
+    //     printf("\n");
+    // }
     matrix_t tmp;
     int code = s21_create_matrix(n, n, &tmp);
 
     if (code == OK) {
-        // get_cofactor(A, &tmp, -1, -1, n);
-
         *result = det(A, n);
     }
     s21_remove_matrix(&tmp);
@@ -26,7 +27,8 @@ int s21_determinant(matrix_t *A, double *result) {
 }
 
 double det(matrix_t *tmp, int n) {
-    if (n == 1) return tmp->matrix[0][0];
+    if (n == 1)
+        return tmp->matrix[0][0];
     double determ = 0;
 
     matrix_t tmp2;
@@ -48,11 +50,14 @@ void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n) {
     int r = 0;
     int c = 0;
     for (int i = 0; i < n; i++) {
-        if (i == row) r = 1;
+        if (i == row)
+            r = 1;
         c = 0;
         for (int j = 0; j < n; j++) {
-            if (j == col) c = 1;
-            if (i != row && j != col) dest->matrix[i - r][j - c] = A->matrix[i][j];
+            if (j == col)
+                c = 1;
+            if (i != row && j != col)
+                dest->matrix[i - r][j - c] = A->matrix[i][j];
         }
     }
 }

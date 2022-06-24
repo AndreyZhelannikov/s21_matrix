@@ -1,56 +1,75 @@
 make --dry-run --always-make --keep-going --print-directory
+<<<<<<< HEAD
 make: Entering directory `/Users/capricey/s21_matrix'
+=======
+make: Entering directory `/Users/andreyzhelannikov/s21_matrix'
+>>>>>>> 4e3d5623745f08e36076ace3a525854cf0ae977e
 mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_calc_complements.o -c ./s21_calc_complements.c
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_mult_number.o -c ./s21_mult_number.c
 mkdir -p ./objs
 gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_create_matrix.o -c ./s21_create_matrix.c
 mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_determinant.o -c ./s21_determinant.c
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_sub_matrix.o -c ./s21_sub_matrix.c
 mkdir -p ./objs
 gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_eq_matrix.o -c ./s21_eq_matrix.c
 mkdir -p ./objs
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_remove_matrix.o -c ./s21_remove_matrix.c
+mkdir -p ./objs
 gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_helpers.o -c ./s21_helpers.c
+mkdir -p ./objs
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_sum_matrix.o -c ./s21_sum_matrix.c
+mkdir -p ./objs
+<<<<<<< HEAD
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_mult_number.o -c ./s21_mult_number.c
+=======
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_transpose.o -c ./s21_transpose.c
+>>>>>>> 4e3d5623745f08e36076ace3a525854cf0ae977e
 mkdir -p ./objs
 gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_inverse_matrix.o -c ./s21_inverse_matrix.c
 mkdir -p ./objs
 gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_mult_matrix.o -c ./s21_mult_matrix.c
 mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_mult_number.o -c ./s21_mult_number.c
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_calc_complements.o -c ./s21_calc_complements.c
 mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_remove_matrix.o -c ./s21_remove_matrix.c
-mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_sub_matrix.o -c ./s21_sub_matrix.c
-mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_sum_matrix.o -c ./s21_sum_matrix.c
-mkdir -p ./objs
-gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_transpose.o -c ./s21_transpose.c
-ar rc s21_matrix.a ./objs/s21_calc_complements.o ./objs/s21_create_matrix.o ./objs/s21_determinant.o ./objs/s21_eq_matrix.o ./objs/s21_helpers.o ./objs/s21_inverse_matrix.o ./objs/s21_mult_matrix.o ./objs/s21_mult_number.o ./objs/s21_remove_matrix.o ./objs/s21_sub_matrix.o ./objs/s21_sum_matrix.o ./objs/s21_transpose.o
+gcc -c -Wall -Wextra -std=c11 -g   -o objs/s21_determinant.o -c ./s21_determinant.c
+ar rc s21_matrix.a ./objs/s21_mult_number.o ./objs/s21_create_matrix.o ./objs/s21_sub_matrix.o ./objs/s21_eq_matrix.o ./objs/s21_remove_matrix.o ./objs/s21_helpers.o ./objs/s21_sum_matrix.o ./objs/s21_transpose.o ./objs/s21_inverse_matrix.o ./objs/s21_mult_matrix.o ./objs/s21_calc_complements.o ./objs/s21_determinant.o
 ranlib s21_matrix.a
 mkdir -p ./tests/objs
 gcc -c -Wall -Wextra -std=c11 -g   -o ./tests/objs/main.o main.c -I gsl/include
+<<<<<<< HEAD
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_calc_complements.o -c tests/test_s21_calc_complements.c -I gsl/include
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_create_matrix.o -c tests/test_s21_create_matrix.c -I gsl/include
+=======
+>>>>>>> 4e3d5623745f08e36076ace3a525854cf0ae977e
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_determinant.o -c tests/test_s21_determinant.c -I gsl/include
-mkdir -p ./tests/objs
-gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_eq_matrix.o -c tests/test_s21_eq_matrix.c -I gsl/include
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_inverse_matrix.o -c tests/test_s21_inverse_matrix.c -I gsl/include
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_mult_matrix.o -c tests/test_s21_mult_matrix.c -I gsl/include
 mkdir -p ./tests/objs
-gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_mult_number.o -c tests/test_s21_mult_number.c -I gsl/include
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_sub_matrix.o -c tests/test_s21_sub_matrix.c -I gsl/include
+mkdir -p ./tests/objs
+<<<<<<< HEAD
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_remove_matrix.o -c tests/test_s21_remove_matrix.c -I gsl/include
+=======
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_transpose.o -c tests/test_s21_transpose.c -I gsl/include
+>>>>>>> 4e3d5623745f08e36076ace3a525854cf0ae977e
+mkdir -p ./tests/objs
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_eq_matrix.o -c tests/test_s21_eq_matrix.c -I gsl/include
+mkdir -p ./tests/objs
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_calc_complements.o -c tests/test_s21_calc_complements.c -I gsl/include
 mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_remove_matrix.o -c tests/test_s21_remove_matrix.c -I gsl/include
 mkdir -p ./tests/objs
-gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_sub_matrix.o -c tests/test_s21_sub_matrix.c -I gsl/include
-mkdir -p ./tests/objs
 gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_sum_matrix.o -c tests/test_s21_sum_matrix.c -I gsl/include
 mkdir -p ./tests/objs
-gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_transpose.o -c tests/test_s21_transpose.c -I gsl/include
-gcc  ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_create_matrix.o ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_transpose.o  ./tests/objs/main.o  -fprofile-arcs -ftest-coverage -o test -lcheck gsl/lib/libgsl.a gsl/lib/libgslcblas.a -L. s21_matrix.a -I gsl/include
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_mult_number.o -c tests/test_s21_mult_number.c -I gsl/include
+mkdir -p ./tests/objs
+gcc -g -c -Wall -Wextra -std=c11 -g   -o tests/objs/test_s21_create_matrix.o -c tests/test_s21_create_matrix.c -I gsl/include
+gcc  ./tests/objs/test_s21_determinant.o ./tests/objs/test_s21_inverse_matrix.o ./tests/objs/test_s21_mult_matrix.o ./tests/objs/test_s21_sub_matrix.o ./tests/objs/test_s21_transpose.o ./tests/objs/test_s21_eq_matrix.o ./tests/objs/test_s21_calc_complements.o ./tests/objs/test_s21_remove_matrix.o ./tests/objs/test_s21_sum_matrix.o ./tests/objs/test_s21_mult_number.o ./tests/objs/test_s21_create_matrix.o  ./tests/objs/main.o  -fprofile-arcs -ftest-coverage -o test -lcheck gsl/lib/libgsl.a gsl/lib/libgslcblas.a -L. s21_matrix.a -I gsl/include
 ./test
-make: Leaving directory `/Users/capricey/s21_matrix'
+make: Leaving directory `/Users/andreyzhelannikov/s21_matrix'
  

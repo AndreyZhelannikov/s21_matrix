@@ -2,7 +2,7 @@
 
 START_TEST(det_test1) {
     int s = 0;
-    int n = RandomInteger(1, 5);
+    int n = RandomInteger(1, 10);
     matrix_t m;
     int code = s21_create_matrix(n, n, &m);
 
@@ -11,7 +11,7 @@ START_TEST(det_test1) {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                double num = RandomReal(-1, 1);
+                double num = RandomReal(-10, 10);
                 gsl_matrix_set(gsl_m, i, j, num);
                 m.matrix[i][j] = num;
             }
