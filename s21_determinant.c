@@ -47,9 +47,7 @@ double det(matrix_t *tmp, int n) {
 void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n) {
     dest->rows = n - 1;
     dest->columns = n - 1;
-    for (int i = 0; i < n; i++) {
-        int r = 0;
-        int c = 0;
+    for (int i = 0, c = 0, r = 0; i < n; i++) {
         if (i == row)
             r = 1;
         c = 0;
