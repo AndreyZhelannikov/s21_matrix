@@ -1,13 +1,9 @@
 #include "s21_matrix_test.h"
 
 START_TEST(mult_test1) {  //
-
-    // int n = RandomReal(1, 10);
-    // int columns = RandomReal(1, 10);
-    // int rows = RandomReal(1, 10);
-    int n = 2;
-    int columns = 2;
-    int rows = 2;
+    int n = RandomInteger(1, 5);
+    int columns = RandomInteger(1, 5);
+    int rows = RandomInteger(1, 5);
 
     matrix_t m1 = {0}, m2 = {0}, mul = {0};
     int code1 = s21_create_matrix(rows, n, &m1);
