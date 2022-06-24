@@ -1,6 +1,6 @@
 #include "s21_matrix.h"
 
-void get_cofactor(matrix_t *A, matrix_t *dest, row, col, n);
+void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n);
 double det(matrix_t *tmp, int n);
 
 int s21_determinant(matrix_t *A, double *result) {
@@ -42,7 +42,7 @@ double det(matrix_t *tmp, int n) {
     return determ;
 }
 
-void get_cofactor(matrix_t *A, matrix_t *dest, row, col, n) {
+void get_cofactor(matrix_t *A, matrix_t *dest, int row, int col, int n) {
     int r = 0;
     int c = 0;
     for (int i = 0; i < n; i++) {
